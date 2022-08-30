@@ -9,6 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import NewHeader from './components/Layout/Header/NewHeader';
 import Footer from './components/Layout/Footer/Footer';
 import About from './components/Layout/About/About';
+import Contact from './components/Layout/Contact/Contact';
 // import "../node_modules/react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 // import { Audio } from 'react-loader-spinner'
 // import "../node_modules/react-loader-spinner/dist/loader"
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/home1" component={NewHeader} />
           <Route path="/foot" component={Footer} />
           <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
       // <Loader />
