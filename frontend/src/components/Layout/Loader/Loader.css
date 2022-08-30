@@ -1,0 +1,17 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF5E4;
+    display: grid;
+    place-items: center;
+    max-width: 100%;
+}
+
+.circleLoader {
+position: absolute;
+top: 50%;
+left: 50%;
+/* right: 50%;
+bottom: 50%; */
+/* color: blue; */
+}

@@ -1,0 +1,78 @@
+.pageNotFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF5E4;
+    margin: auto;
+    height: 100%;
+    padding-bottom: 0;
+}
+
+
+.insideDiv {
+    margin: auto;
+    text-align: center;
+    padding: 10vmax;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.insideDiv>svg {
+    font-size: 7vmax;
+    color: #A10035;
+}
+.insideDiv>img {
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
+
+.insideDiv>p {
+    font-size: 4vmax;
+    font-weight: 500;
+    font-family: Montserrat ;
+}
+
+.insideDiv>a {
+    background-color: #483838;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 1vmax 3vmax;
+    cursor: pointer;
+    font: 400 1.5vmax "Poppins";
+    text-decoration: none;
+    margin: 2vmax;
+    
+}
+
+a:hover{
+    opacity: 0.5;
+   
+
+}
+
+@media screen and (max-width: 600px) {
+    .insideDiv>a {
+        padding: 3vw 6vw;
+        font: 400 4vw "Roboto";
+        margin: 2vmax;
+    }
+
+    .insideDiv>svg {
+        font-size: 20vw;
+    }
+
+    .insideDiv>p {
+        margin: 2vmax;
+        font-size: 5vw;
+    }
+
+           .insideDiv>img {
+               height: 100px;
+               width: 100px;
+           }
+}

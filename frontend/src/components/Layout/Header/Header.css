@@ -1,0 +1,11 @@
+.menuBurger {
+    height:5vmax;
+    width: 5vmax;
+    font-weight: bolder;
+}
+
+a{
+    font-family: Lato !important;
+    font-size: 1.5vmax !important;
+    font-weight: 500 !important;
+}
