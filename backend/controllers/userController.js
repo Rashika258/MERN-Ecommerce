@@ -16,6 +16,8 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     resource_type: "auto",
   });
 
+  
+
   const { name, email, password } = req.body;
 
   const user = await User.create({

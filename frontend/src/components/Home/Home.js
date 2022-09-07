@@ -1,10 +1,12 @@
 import React, { Fragment, useEffect } from "react";
-import { BsFillMouse2Fill } from "react-icons/bs";
-import "./Home.css";
-import ProductCard from "./ProductCard.js";
-import MetaData from "../Layout/MetaData/MetaData";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
+import { BsFillMouse2Fill } from "react-icons/bs";
+
+import "./Home.css";
+
+import ProductCard from "./ProductCard.js";
+import MetaData from "../Layout/MetaData/MetaData";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import Loader from "../Layout/Loader/Loader";
 
@@ -28,8 +30,9 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="ECOMMERCE" />
-          <div className="home">
+          <MetaData title="Flipzon" />
+            <div className="home">
+              
             <div className="banner">
               <p>Welcome to FLIPZON</p>
               <h1>Find Amazing Products Below</h1>
