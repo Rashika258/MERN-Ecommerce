@@ -3,8 +3,11 @@ import React from "react";
 import logo from "../../../images/logo.png";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const OverlayNavbar = require("overlay-navbar");
-const { ReactNavbar } = OverlayNavbar;
+// const OverlayNavbar = require("overlay-navbar");
+// const { ReactNavbar } = OverlayNavbar;
+import { ReactNavbar } from "overlay-navbar";
+import { FaAddressBook, FaCartPlus, FaSearch} from "react-icons/fa";
+import "./Header.css"
 
 const options = {
   burgerColorHover: "#eb4034",
@@ -37,6 +40,12 @@ const options = {
   searchIconColorHover: "#eb4034",
   cartIconColorHover: "#eb4034",
   cartIconMargin: "1vmax",
+  searchIcon: true,
+  profileIcon: true,
+  cartIcon: true,
+  CartIconElement: FaCartPlus,
+  ProfileIconElement: FaAddressBook,
+  SearchIconElement: FaSearch
 };
 
 const Header = () => {

@@ -14,19 +14,17 @@ import AlertTemplate from 'react-alert-template-basic';
 const options = {
   timeout: 5000,
   position:positions.BOTTOM_CENTER,
-  transition: transitions.SCALE
+  transition: transitions.SCALE,
+  offset:'30px'
 }
 
 
-ReactDOM.render(<App />,
-  // <Provider store={store}>
-  //   <AlertProvider template={AlertTemplate} {...options}>
-  //     <React.StrictMode>
-  //       {/* <App /> */}
-  //       <New />
-  //     </React.StrictMode>
-  //   </AlertProvider>
-  // </Provider>,
+ReactDOM.render(
+  <Provider store={store}>
+    <AlertProvider template={AlertTemplate} {...options}>
+      <App />
+    </AlertProvider>
+  </Provider>,
   document.getElementById("root")
 );
 

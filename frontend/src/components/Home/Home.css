@@ -39,7 +39,9 @@
   background-color: #fff5e4;
   border: 1px solid #fff5e4;
   /* border-radius: 0; */
-  padding: 1vmax;
+  padding-top: 0.2vmax;
+  padding-left: 0.2vmax;
+  padding-right: 0.3vmax;
   transition: all 0.5s;
   width: 8vmax;
   font: 500 1vmax "Lato";
@@ -49,10 +51,14 @@
   color: #850e35;
   font-size: larger;
   font-weight: bolder;
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
 
 }
 
-.banner > a> button> .btnIcon{
+ .btnIcon{
+    padding-top: 0.2vmax;
     
 }
 
