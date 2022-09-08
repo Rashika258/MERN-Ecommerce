@@ -31,8 +31,7 @@ const Home = () => {
       ) : (
         <Fragment>
           <MetaData title="Flipzon" />
-            <div className="home">
-              
+          <div className="home">
             <div className="banner">
               <p>Welcome to FLIPZON</p>
               <h1>Find Amazing Products Below</h1>
@@ -47,13 +46,11 @@ const Home = () => {
 
             <h2 className="homeHeading">Featured Products</h2>
 
-              <div className="container" id="container">
-                
-                {
-                  products && products.map((product) => (
-                    <ProductCard key={product._id} product={product} />
-                  ))
-                }
+            <div className="container" id="container">
+              {products &&
+                products.map((product) => (
+                  <ProductCard key={product._id} product={product} />
+                ))}
             </div>
           </div>
         </Fragment>

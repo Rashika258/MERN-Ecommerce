@@ -6,10 +6,6 @@ const fileUpload = require("express-fileupload");
 const path = require("path");
 // const fs = require('fs');
 const cors = require("cors");
-// const { createProxyMiddleware } = require("http-proxy-middleware");
-// Step 5 - set up multer for storing uploaded files
-  
-// var multer = require('multer');
 
 const errorMiddleware = require("./middleware/error");
 
@@ -40,21 +36,6 @@ app.use(cors());
 //   filename: (req, file, cb) => {
 //     cb(null, file.fieldname + "-" + Date.now());
 //   },
-// });
-
-// var upload = multer({ storage: storage });
-
-
-
-// const proxyMiddleware = createProxyMiddleware("/", {
-//   target: "http://localhost:3000",
-//   changeOrigin: true,
-// });
-
-// app.use(proxyMiddleware);
-
-// app.listen(5000, () => {
-//   console.log("proxy is listening on port 5000");
 // });
 
 // Route Imports

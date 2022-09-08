@@ -1,14 +1,20 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 
 import { clearErrors, login, register } from "../../../actions/userAction";
+
+
 import Loader from "../../Layout/Loader/Loader";
 
-import { Link } from "react-router-dom";
+
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import FaceIcon from "@material-ui/icons/Face";
+
+
 import "./LoginSignUp.css";
 
 const LoginSignUp = ({ history, location }) => {

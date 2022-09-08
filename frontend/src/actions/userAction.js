@@ -79,20 +79,21 @@ export const register = (userData) => async (dispatch) => {
       headers: {
         //  "Access-Control-Allow-Origin":"*",
         "Content-Type": "multipart/form-data",
+        "accepts": "application/json",
         // "Access-Control-Allow-Origin": "http://localhost:3000",
-       
+
         // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
         // "Access-Control-Allow-Headers": "content-type",
         // "Access-Control-Allow-Credentials": "true",
       },
     };
 
-    const headers = {
-      // "Access-Control-Allow-Origin": "*",
-      "Content-Type": "multipart/form-data",
-    };
+    // const headers = {
+    //   // "Access-Control-Allow-Origin": "*",
+    //   "Content-Type": "multipart/form-data",
+    // };
 
-    const { data } = await axios.post(`/api/v1/register`, userData, {config});
+    const { data } = await axios.post(`/api/v1/register`, userData, { config });
 
     dispatch({
       type: REGISTER_USER_SUCCESS,
