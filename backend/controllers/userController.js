@@ -16,8 +16,6 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     resource_type: "auto",
   });
 
-  
-
   const { name, email, password } = req.body;
 
   const user = await User.create({
@@ -93,7 +91,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Ecommerce Password Recovery`,
+      subject: `Flipzon Password Recovery`,
       message,
     });
 
@@ -211,6 +209,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
 
   res.status(200).json({
     success: true,
+    user
   });
 });
 

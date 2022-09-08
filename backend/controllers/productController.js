@@ -38,6 +38,48 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
+exports.getAllProductAndSearch = catchAsyncErrors(async (req, res, next) => {
+   const resultPerPage = 8;
+   const productCount = await Product.countDocuments();
+
+   const key = req.query.keyword
+     ? {
+         name: {
+           $regex: req.query.keyword,
+           $options: "i",
+         },
+       }
+     : {};
+
+   const ProductsRes = await Product.find({ ...key });
+
+   const queryCopy = { ...req.query };
+
+   const removeFields = ["keyword", "page", "limit"];
+
+   removeFields.forEach((key) => delete queryCopy[key]);
+
+   let queryStr = JSON.stringify(queryCopy);
+   queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`);
+
+   let filteredProducts = await Product.find(JSON.parse(queryStr));
+
+   let filteredProductsCount = ProductsRes.length;
+   const currentPage = Number(req.query.page) || 1;
+   const skip = resultPerPage * (currentPage - 1);
+   let ProductsPage = await Product.find().limit(resultPerPage).skip(skip);
+
+    res.status(200).json({
+      success: true,
+      ProductsRes,
+      productCount,
+      resultPerPage,
+      filteredProducts,
+      filteredProductsCount,
+      ProductsPage,
+    });
+})
+
 // Get All Product
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
   const resultPerPage = 8;

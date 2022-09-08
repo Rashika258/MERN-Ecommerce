@@ -79,7 +79,7 @@ export const register = (userData) => async (dispatch) => {
       headers: {
         //  "Access-Control-Allow-Origin":"*",
         "Content-Type": "multipart/form-data",
-        "accepts": "application/json",
+        // "accepts": "application/json",
         // "Access-Control-Allow-Origin": "http://localhost:3000",
 
         // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",

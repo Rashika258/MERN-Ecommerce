@@ -12,6 +12,8 @@ import ProductCard from "../../Home/ProductCard";
 import Loader from '../../Layout/Loader/Loader';
 import MetaData from '../../Layout/MetaData/MetaData';
 
+import "./Products.css"
+
 const categories = [
   "Laptop",
   "Footwear",

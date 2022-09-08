@@ -5,9 +5,10 @@ import { BsFillMouse2Fill } from "react-icons/bs";
 
 import "./Home.css";
 
+import { clearErrors, getProduct } from "../../actions/productAction";
+
 import ProductCard from "./ProductCard.js";
 import MetaData from "../Layout/MetaData/MetaData";
-import { clearErrors, getProduct } from "../../actions/productAction";
 import Loader from "../Layout/Loader/Loader";
 
 const Home = () => {
@@ -38,7 +39,7 @@ const Home = () => {
 
               <a href="#container">
                 <button>
-                  Scroll &nbsp; &nbsp;{" "}
+                  Scroll 
                   <BsFillMouse2Fill className="btnIcon" size={32} />
                 </button>
               </a>

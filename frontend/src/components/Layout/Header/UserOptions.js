@@ -18,7 +18,6 @@ const UserOptions = ({ user }) => {
   const { cartItems } = useSelector((state) => state.cart);
 
   const [open, setOpen] = useState(false);
-
   const history = useHistory();
   const alert = useAlert();
   const dispatch = useDispatch();
@@ -37,10 +36,8 @@ const UserOptions = ({ user }) => {
     },
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
-  // useHistory:  lets you access the history instance used by React Router. Using the history instance you can redirect users to another page. The history instance created by React Router uses a Stack( called “History Stack” ), that stores all the entries the user has visited.
 
   if (user.role === "admin") {
-    // The unshift() method adds new elements to the beginning of an array.The unshift() method overwrites the original array.
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
@@ -55,18 +52,15 @@ const UserOptions = ({ user }) => {
   function orders() {
     history.push("/orders");
   }
-
   function account() {
     history.push("/account");
   }
-
   function cart() {
     history.push("/cart");
   }
-
   function logoutUser() {
     dispatch(logout());
-    alert.success("Logged out Successfully");
+    alert.success("Logout Successfully");
   }
 
   return (
