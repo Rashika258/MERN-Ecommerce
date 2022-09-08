@@ -47,7 +47,7 @@ import ConfirmOrder from "./components/Cart/ConfirmOrder/ConfirmOrder";
 
 
 // order comp
-import MyOrders from "./components/Order/MyOrder/MyOrder";
+import MyOrders from "./components/Order/MyOrders/MyOrders";
 import OrderDetails from "./components/Order/OrderDetails/OrderDetails";
 
 
