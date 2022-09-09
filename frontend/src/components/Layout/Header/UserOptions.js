@@ -15,6 +15,25 @@ import "./Header.css";
 import { logout } from "../../../actions/userAction";
 
 const UserOptions = ({ user }) => {
+
+    function dashboard() {
+      history.push("/admin/dashboard");
+    }
+
+    function orders() {
+      history.push("/orders");
+    }
+    function account() {
+      history.push("/account");
+    }
+    function cart() {
+      history.push("/cart");
+    }
+    function logoutUser() {
+      dispatch(logout());
+      alert.success("Logout Successfully");
+    }
+
   const { cartItems } = useSelector((state) => state.cart);
 
   const [open, setOpen] = useState(false);
@@ -45,32 +64,16 @@ const UserOptions = ({ user }) => {
     });
   }
 
-  function dashboard() {
-    history.push("/admin/dashboard");
-  }
 
-  function orders() {
-    history.push("/orders");
-  }
-  function account() {
-    history.push("/account");
-  }
-  function cart() {
-    history.push("/cart");
-  }
-  function logoutUser() {
-    dispatch(logout());
-    alert.success("Logout Successfully");
-  }
 
   return (
     <Fragment>
-      <Backdrop open={open} style={{ zIndex: "10" }} />
+      <Backdrop open={open}  />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
-        onClose={() => setOpen(false)}
+        onClose={() => setOpen(true)}
         onOpen={() => setOpen(true)}
-        style={{ zIndex: "11" }}
+
         open={open}
         direction="down"
         className="speedDial"

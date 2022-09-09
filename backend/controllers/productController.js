@@ -80,6 +80,15 @@ exports.getAllProductAndSearch = catchAsyncErrors(async (req, res, next) => {
     });
 })
 
+exports.getEveryProducts = catchAsyncErrors(async (req, res, next) => {
+  const products = await Product.find();
+
+  res.status(200).json({
+    success: true,
+    products,
+  });
+})
+
 // Get All Product
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
   const resultPerPage = 8;

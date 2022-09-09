@@ -31,6 +31,29 @@ import {
   CLEAR_ERRORS,
 } from "../constants/productConstants";
 
+
+export const getAllProducts = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: ALL_PRODUCT_REQUEST
+    });
+
+    const { data } = await axios.get("/api/v1/products/all");
+
+    dispatch({
+      type: ALL_PRODUCT_SUCCESS,
+      payload: data.products,
+    });
+
+
+  } catch (error) {
+     dispatch({
+       type: ALL_PRODUCT_FAIL,
+       payload: error.response.data.message,
+     });
+  }
+}
+
 export const getProduct =
   (keyword = "", currentPage = 1, price = [0, 25000], category, ratings = 0) =>
   async (dispatch) => {

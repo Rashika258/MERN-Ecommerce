@@ -5,7 +5,7 @@ import { BsFillMouse2Fill } from "react-icons/bs";
 
 import "./Home.css";
 
-import { clearErrors, getProduct } from "../../actions/productAction";
+import { clearErrors, getAllProducts } from "../../actions/productAction";
 
 import ProductCard from "./ProductCard.js";
 import MetaData from "../Layout/MetaData/MetaData";
@@ -22,7 +22,7 @@ const Home = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getProduct());
+    dispatch(getAllProducts());
   }, [dispatch, error, alert]);
 
   return (
@@ -39,7 +39,7 @@ const Home = () => {
 
               <a href="#container">
                 <button>
-                  Scroll 
+                  Scroll
                   <BsFillMouse2Fill className="btnIcon" size={32} />
                 </button>
               </a>
@@ -47,7 +47,11 @@ const Home = () => {
 
             <h2 className="homeHeading">Featured Products</h2>
 
-            <div className="container" id="container">
+              <div className="container" id="container">
+                {
+                  console.log("Products ",products)
+                }
+
               {products &&
                 products.map((product) => (
                   <ProductCard key={product._id} product={product} />

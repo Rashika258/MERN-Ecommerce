@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useAlert } from 'react-alert';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { clearErrors, getProduct } from "../../../actions/productAction";
+import { clearErrors, getAllProducts, getProduct } from "../../../actions/productAction";
 
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
@@ -63,14 +63,15 @@ const Products = ({ match }) => {
           dispatch(clearErrors());
         }
 
-        dispatch(getProduct(keyword, currentPage, price, category, ratings));
+        // dispatch(getProduct(keyword, currentPage, price, category, ratings));
+        dispatch(getAllProducts());
       }, [
         dispatch,
-        keyword,
-        currentPage,
-        price,
-        category,
-        ratings,
+        // keyword,
+        // currentPage,
+        // price,
+        // category,
+        // ratings,
         alert,
         error,
       ]);
@@ -84,10 +85,13 @@ const Products = ({ match }) => {
           <MetaData title="PRODUCTS -- Flipzon" />
           <h2 className="productsHeading">Products</h2>
 
-          <div className="products">
+            <div className="products">
+              {/* {
+                console.log(products)
+              } */}
             {products &&
-              products.map((product) => (
-                <ProductCard key={product._id} product={product} />
+              products.map((p) => (
+                <ProductCard key={p._id} product={p} />
               ))}
           </div>
 
