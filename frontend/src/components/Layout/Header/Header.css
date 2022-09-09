@@ -1,11 +1,36 @@
 .menuBurger {
-    height:5vmax;
+    height:4vmax;
     width: 5vmax;
     font-weight: bolder;
+    color: wheat;
+    background-color: #FFF5E4;
 }
 
 a{
     font-family: Lato !important;
     font-size: 1.5vmax !important;
     font-weight: 500 !important;
+}
+
+.speedDial {
+    position: fixed;
+    right: 3vmax;
+    top: 3vmax;
+}
+
+.speedDialIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.logoReactNavbar {
+    height: 80px !important;
+    width: 200px !important;
+    border-radius: 30px;
+}
+
+
+.MuiSpeedDialAction-fab:hover {
+ background-color: #FEC260 !important;
 }

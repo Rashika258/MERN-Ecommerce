@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { useAlert } from 'react-alert';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { Fragment, useEffect, useState } from "react";
+import { useAlert } from "react-alert";
+import { useDispatch, useSelector } from "react-redux";
 
 import Carousel from "react-material-ui-carousel";
 import {
@@ -12,93 +12,97 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 
-import { clearErrors, getProductDetails, newReview } from "../../../actions/productAction";
+import {
+  clearErrors,
+  getProductDetails,
+  newReview,
+} from "../../../actions/productAction";
 import { addItemsToCart } from "../../../actions/cartAction";
 import { NEW_REVIEW_RESET } from "../../../constants/productConstants";
 
-import "./ProductDetails.css"
+import "./ProductDetails.css";
 
-import Loader from '../../Layout/Loader/Loader';
-import MetaData from '../../Layout/MetaData/MetaData';
+import Loader from "../../Layout/Loader/Loader";
+import MetaData from "../../Layout/MetaData/MetaData";
 import ReviewCard from "../ReviewCard/ReviewCard";
 
-
 const ProductDetails = ({ match }) => {
-    const dispatch = useDispatch();
-    const alert = useAlert();
+  const dispatch = useDispatch();
+  const alert = useAlert();
 
+  const { product, loading, error } = useSelector(
+    (state) => state.productDetails
+  );
 
-    const { product, loading, error } = useSelector((state) => state.productDetails);
+  const { success, error: reviewError } = useSelector(
+    (state) => state.newReview
+  );
 
-    const { success, error: reviewError } = useSelector((state) => state.newReview);
+  const options = {
+    size: "large",
+    value: product.ratings,
+    readOnly: true,
+    precision: 0.5,
+  };
 
-    const options = {
-      size: "large",
-      value: product.ratings,
-      readOnly: true,
-      precision: 0.5,
-    };
+  const [quantity, setQuantity] = useState(1);
+  const [open, setOpen] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
 
-    const [quantity, setQuantity] = useState(1);
-    const [open, setOpen] = useState(false);
-    const [rating, setRating] = useState(0);
-    const [comment, setComment] = useState("");
+  const increaseQuantity = () => {
+    if (product.Stock <= quantity) return;
 
-    const increaseQuantity = () => {
-        if (product.Stock <= quantity) return;
+    const qty = quantity + 1;
 
-        const qty = quantity + 1;
+    setQuantity(qty);
+  };
 
-        setQuantity(qty);
-    };
+  const decreaseQuantity = () => {
+    if (1 >= quantity) return;
 
-      const decreaseQuantity = () => {
-        if (1 >= quantity) return;
+    const qty = quantity - 1;
+    setQuantity(qty);
+  };
 
-        const qty = quantity - 1;
-        setQuantity(qty);
-      }; 
-    
-    const addToCartHandler = () => {
-         dispatch(addItemsToCart(match.params.id, quantity));
-         alert.success("Item Added To Cart");
+  const addToCartHandler = () => {
+    dispatch(addItemsToCart(match.params.id, quantity));
+    alert.success("Item Added To Cart");
+  };
+
+  const submitReviewToggle = () => {
+    open ? setOpen(false) : setOpen(true);
+  };
+
+  const reviewSubmitHandler = () => {
+    const myForm = new FormData();
+
+    myForm.set("rating", rating);
+    myForm.set("comment", comment);
+    myForm.set("productId", match.params.id);
+
+    dispatch(newReview(myForm));
+
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
     }
 
+    if (reviewError) {
+      alert.error(reviewError);
+      dispatch(clearErrors());
+    }
 
-    const submitReviewToggle = () => {
-      open ? setOpen(false) : setOpen(true);
-    };
-
-    const reviewSubmitHandler = () => {
-      const myForm = new FormData();
-
-      myForm.set("rating", rating);
-      myForm.set("comment", comment);
-      myForm.set("productId", match.params.id);
-
-      dispatch(newReview(myForm));
-
-      setOpen(false);
-    };
-
-     useEffect(() => {
-       if (error) {
-         alert.error(error);
-         dispatch(clearErrors());
-       }
-
-       if (reviewError) {
-         alert.error(reviewError);
-         dispatch(clearErrors());
-       }
-
-       if (success) {
-         alert.success("Review Submitted Successfully");
-         dispatch({ type: NEW_REVIEW_RESET });
-       }
-       dispatch(getProductDetails(match.params.id));
-     }, [dispatch, match.params.id, error, alert, reviewError, success]);
-
+    if (success) {
+      alert.success("Review Submitted Successfully");
+      dispatch({ type: NEW_REVIEW_RESET });
+    }
+    dispatch(getProductDetails(match.params.id));
+  }, [dispatch, match.params.id, error, alert, reviewError, success]);
 
   return (
     <Fragment>
@@ -106,7 +110,8 @@ const ProductDetails = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${product.name} -- ECOMMERCE`} />
+          <MetaData title={`Flipzon - ${product.name}`} />
+          <h3 className="productHeading">PRODUCT - {`${product.name}`}</h3>
           <div className="ProductDetails">
             <div>
               <Carousel>
@@ -125,17 +130,18 @@ const ProductDetails = ({ match }) => {
             <div>
               <div className="detailsBlock-1">
                 <h2>{product.name}</h2>
-                <p>Product # {product._id}</p>
+                <p>ProductId - {product._id}</p>
               </div>
+
               <div className="detailsBlock-2">
                 <Rating {...options} />
                 <span className="detailsBlock-2-span">
                   {" "}
-                  ({product.numOfReviews} Reviews)
+                  - {product.numOfReviews} Reviews
                 </span>
               </div>
               <div className="detailsBlock-3">
-                <h1>{`₹${product.price}`}</h1>
+                <h1>{`₹ ${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
                     <button onClick={decreaseQuantity}>-</button>
@@ -151,15 +157,15 @@ const ProductDetails = ({ match }) => {
                 </div>
 
                 <p>
-                  Status:
+                  Status -
                   <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
-                    {product.Stock < 1 ? "OutOfStock" : "InStock"}
+                    &nbsp; {product.Stock < 1 ? "Out Of Stock" : "In Stock"}
                   </b>
                 </p>
               </div>
 
               <div className="detailsBlock-4">
-                Description : <p>{product.description}</p>
+                Description <p>{product.description}</p>
               </div>
 
               <button onClick={submitReviewToggle} className="submitReview">
@@ -175,7 +181,7 @@ const ProductDetails = ({ match }) => {
             open={open}
             onClose={submitReviewToggle}
           >
-            <DialogTitle>Submit Review</DialogTitle>
+            <DialogTitle className="submitDialogHeading">Submit Review</DialogTitle>
             <DialogContent className="submitDialog">
               <Rating
                 onChange={(e) => setRating(e.target.value)}
@@ -215,6 +221,6 @@ const ProductDetails = ({ match }) => {
       )}
     </Fragment>
   );
-}
+};
 
-export default ProductDetails
+export default ProductDetails;

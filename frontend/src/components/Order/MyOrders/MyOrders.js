@@ -25,7 +25,6 @@ const MyOrders = () => {
 
   const columns = [
     { field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },
-
     {
       field: "status",
       headerName: "Status",

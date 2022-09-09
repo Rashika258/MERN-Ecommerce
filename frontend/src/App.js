@@ -61,6 +61,7 @@ import ProcessOrder from "./components/Admin/ProcessOrder/ProcessOrder";
 import UsersList from "./components/Admin/UsersList/UsersList";
 import UpdateUser from "./components/Admin/UpdateUser/UpdateUser";
 import ProductReviews from "./components/Admin/ProductReviews/ProductReviews";
+import Loader from "./components/Layout/Loader/Loader";
 
 const App = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -94,11 +95,13 @@ const App = () => {
 
         <Route path="/products/:keyword" component={Products} />
 
-        <Route exact path="/search" component={Search} />
+        <Route exact path="/Search" component={Search} />
 
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
 
+        <Route exact path="/not" component={NotFound} />
+        <Route exact path="/load" component={Loader} />
         <ProtectedRoute exact path="/account" component={Profile} />
 
         <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
@@ -195,7 +198,6 @@ const App = () => {
 
       <Footer />
     </Router>
-   
   );
 };
 

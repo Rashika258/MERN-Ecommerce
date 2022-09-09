@@ -8,11 +8,13 @@ import Backdrop from "@material-ui/core/Backdrop";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import ListAltIcon from "@material-ui/icons/ListAlt";
+import {FaClipboardList} from "react-icons/fa";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 import "./Header.css";
 import { logout } from "../../../actions/userAction";
+import Profile from "../../../images/Profile.png";
+
 
 const UserOptions = ({ user }) => {
 
@@ -42,23 +44,39 @@ const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
 
   const options = [
-    { icon: <ListAltIcon />, name: "Orders", func: orders },
-    { icon: <PersonIcon />, name: "Profile", func: account },
+    {
+      icon: <FaClipboardList style={{ width: "30px", height: "30px" }} />,
+      name: "Orders",
+      func: orders,
+    },
+    {
+      icon: <PersonIcon style={{ width: "30px", height: "30px" }} />,
+      name: "Profile",
+      func: account,
+    },
     {
       icon: (
         <ShoppingCartIcon
-          style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+          style={{
+            width: "30px",
+            height: "30px",
+            color: cartItems.length > 0 ? "#A10030" : "unset",
+          }}
         />
       ),
       name: `Cart(${cartItems.length})`,
       func: cart,
     },
-    { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
+    {
+      icon: <ExitToAppIcon style={{ width: "30px", height: "30px" }} />,
+      name: "Logout",
+      func: logoutUser,
+    },
   ];
 
   if (user.role === "admin") {
     options.unshift({
-      icon: <DashboardIcon />,
+      icon: <DashboardIcon style={{ width: "30px", height: "30px" }} />,
       name: "Dashboard",
       func: dashboard,
     });
@@ -68,19 +86,18 @@ const UserOptions = ({ user }) => {
 
   return (
     <Fragment>
-      <Backdrop open={open}  />
+      <Backdrop open={open} style={{ zIndex: "10" }} />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
-        onClose={() => setOpen(true)}
+        onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
-
         open={open}
         direction="down"
         className="speedDial"
         icon={
           <img
             className="speedDialIcon"
-            src={user.avatar.url ? user.avatar.url : "/Profile.png"}
+            src={user.avatar.url ? user.avatar.url : Profile}
             alt="Profile"
           />
         }

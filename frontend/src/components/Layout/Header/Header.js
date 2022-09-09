@@ -1,21 +1,18 @@
 import React from "react";
-// import { ReactNavbar } from "overlay-navbar";
-import logo from "../../../images/logo.png";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// const OverlayNavbar = require("overlay-navbar");
-// const { ReactNavbar } = OverlayNavbar;
+import logo from "../../../images/Flipzon_logo2.png";
 import { ReactNavbar } from "overlay-navbar";
-import { FaAddressBook, FaCartPlus, FaSearch} from "react-icons/fa";
+import { FaUserCog, FaShoppingCart, FaSearch } from "react-icons/fa";
+
+
 import "./Header.css"
 
 const options = {
-  burgerColorHover: "#eb4034",
+  burgerColorHover: "#850E35",
   logo,
   logoWidth: "20vmax",
-  navColor1: "white",
+  navColor1: "#FFF5E4",
   logoHoverSize: "10px",
-  logoHoverColor: "#eb4034",
+  logoHoverColor: "#850E35",
   link1Text: "Home",
   link2Text: "Products",
   link3Text: "Contact",
@@ -30,22 +27,22 @@ const options = {
   nav2justifyContent: "flex-end",
   nav3justifyContent: "flex-start",
   nav4justifyContent: "flex-start",
-  link1ColorHover: "#eb4034",
+  link1ColorHover: "#850E35",
   link1Margin: "1vmax",
   profileIconUrl: "/login",
   profileIconColor: "rgba(35, 35, 35,0.8)",
   searchIconColor: "rgba(35, 35, 35,0.8)",
   cartIconColor: "rgba(35, 35, 35,0.8)",
-  profileIconColorHover: "#eb4034",
-  searchIconColorHover: "#eb4034",
-  cartIconColorHover: "#eb4034",
+  profileIconColorHover: "#850E35",
+  searchIconColorHover: "#850E35",
+  cartIconColorHover: "#850E35",
   cartIconMargin: "1vmax",
   searchIcon: true,
   profileIcon: true,
   cartIcon: true,
-  CartIconElement: FaCartPlus,
-  ProfileIconElement: FaAddressBook,
-  SearchIconElement: FaSearch
+  CartIconElement: FaShoppingCart,
+  ProfileIconElement: FaUserCog,
+  SearchIconElement: FaSearch,
 };
 
 const Header = () => {

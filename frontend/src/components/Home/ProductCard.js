@@ -7,7 +7,8 @@ const ProductCard = ({product}) => {
   const options = {
     value: product.ratings,
     readOnly: true,
-    precision:0.5
+    precision: 0.5,
+    size:'medium'
   }
 
 
@@ -16,13 +17,13 @@ const ProductCard = ({product}) => {
       <img src={product.images[0].url} alt={product.name} />
       <p>{product.name}</p>
       <div>
-        <Rating {...options} />{" "}
+        <Rating {...options} /> &nbsp; - {" "}
         <span className="productCardSpan">
           {" "}
-          ({product.numOfReviews} Reviews)
+          {product.numOfReviews} Reviews
         </span>
       </div>
-      <span>{`₹${product.price}`}</span>
+      <span>{`₹ ${product.price}`}</span>
     </Link>
   );
 }

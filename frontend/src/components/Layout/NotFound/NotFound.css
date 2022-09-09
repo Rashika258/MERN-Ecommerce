@@ -4,7 +4,7 @@
     justify-content: center;
     background-color: #FFF5E4;
     margin: auto;
-    height: 100%;
+    height: 100vh;
     padding-bottom: 0;
 }
 
@@ -30,10 +30,10 @@
     padding: 50px;
 }
 
-.insideDiv>p {
+.insideDiv>h1 {
     font-size: 4vmax;
     font-weight: 500;
-    font-family: Montserrat ;
+    font-family: "Montserrat" ;
 }
 
 .insideDiv>a {
@@ -43,7 +43,7 @@
     border-radius: 20px;
     padding: 1vmax 3vmax;
     cursor: pointer;
-    font: 400 1.5vmax "Poppins";
+    font: 400 1.5vmax "Lato";
     text-decoration: none;
     margin: 2vmax;
     

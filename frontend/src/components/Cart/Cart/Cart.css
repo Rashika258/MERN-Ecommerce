@@ -2,20 +2,25 @@
     margin: auto;
     text-align: center;
     padding: 10vmax;
-    height: 50vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .emptyCart>svg {
     font-size: 5vmax;
-    color: tomato;
+    color: #A10035;
+    padding-bottom: 2vmax;
 }
 
-.emptyCart>p {
-    font-size: 2vmax;
+.emptyCart>h1 {
+    font-size: 3vmax;
+    padding-bottom: 2vmax;
+    /* background-color: bisque; */
+    font-family: "Montserrat";
 }
 
 .emptyCart>a {
@@ -24,23 +29,26 @@
     border: none;
     padding: 1vmax 3vmax;
     cursor: pointer;
-    font: 400 1vmax "Roboto";
+    font: 400 1.2vmax "Lato";
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .cartPage {
+    padding-top: 15vmax !important;
     padding: 5vmax;
+    
 }
 
 .cartHeader {
-    background-color: tomato;
+    background-color: #A10035;
     width: 90%;
     box-sizing: border-box;
     margin: auto;
     color: white;
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
-    font: 300 0.7vmax "Roboto";
+    font: 800 1.5vmax "Montserrat";
 }
 
 .cartHeader>p {
@@ -104,7 +112,7 @@
 }
 
 .cartGrossProfitBox {
-    border-top: 3px solid tomato;
+    border-top: 3px solid #A10035;
     margin: 1vmax 4vmax;
     box-sizing: border-box;
     padding: 2vmax 0;
@@ -119,7 +127,7 @@
 }
 
 .checkOutBtn>button {
-    background-color: tomato;
+    background-color: #A10035;
     color: white;
     border: none;
     padding: 0.8vmax 4vmax;

@@ -11,7 +11,7 @@ const NotFound = () => {
       <div className="insideDiv">
               <ErrorIcon />
               <img src={NotFoundImg} alt="" />
-        <Typography>Page Not Found </Typography>
+        <h1>Page Not Found </h1>
         <Link to="/">Home</Link>
       </div>
     </div>

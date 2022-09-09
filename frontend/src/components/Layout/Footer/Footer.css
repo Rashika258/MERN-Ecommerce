@@ -1,7 +1,13 @@
 footer {
-  margin-top: 10vmax;
-  padding: 2vmax;
+  /* margin-top: 10vmax; */
+  /* padding: 2vmax; */
   background-color: #850e35;
+  /* color: white;
+  display: flex;
+  align-items: center; */
+  margin-top: 60vmax;
+  padding: 2vmax;
+  /* background-color: rgb(34, 33, 33); */
   color: white;
   display: flex;
   align-items: center;

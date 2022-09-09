@@ -48,9 +48,9 @@ const Home = () => {
             <h2 className="homeHeading">Featured Products</h2>
 
               <div className="container" id="container">
-                {
+                {/* {
                   console.log("Products ",products)
-                }
+                } */}
 
               {products &&
                 products.map((product) => (

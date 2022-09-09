@@ -1,18 +1,22 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { useAlert } from 'react-alert';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { Fragment, useEffect, useState } from "react";
+import { useAlert } from "react-alert";
+import { useDispatch, useSelector } from "react-redux";
 
-import { clearErrors, getAllProducts, getProduct } from "../../../actions/productAction";
+import {
+  clearErrors,
+  getAllProducts,
+  getProduct,
+} from "../../../actions/productAction";
 
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import Pagination from "react-js-pagination";
 
 import ProductCard from "../../Home/ProductCard";
-import Loader from '../../Layout/Loader/Loader';
-import MetaData from '../../Layout/MetaData/MetaData';
+import Loader from "../../Layout/Loader/Loader";
+import MetaData from "../../Layout/MetaData/MetaData";
 
-import "./Products.css"
+import "./Products.css";
 
 const categories = [
   "Laptop",
@@ -24,18 +28,15 @@ const categories = [
   "SmartPhones",
 ];
 
-
 const Products = ({ match }) => {
-    
-    const dispatch = useDispatch();
-    const alert = useAlert();
+  const dispatch = useDispatch();
+  const alert = useAlert();
 
-      const [currentPage, setCurrentPage] = useState(1);
-      const [price, setPrice] = useState([0, 25000]);
-      const [category, setCategory] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [price, setPrice] = useState([0, 25000]);
+  const [category, setCategory] = useState("");
 
-    const [ratings, setRatings] = useState(0);
-    
+  const [ratings, setRatings] = useState(0);
 
   const {
     products,
@@ -46,57 +47,56 @@ const Products = ({ match }) => {
     filteredProductsCount,
   } = useSelector((state) => state.products);
 
-      const keyword = match.params.keyword;
+  const keyword = match.params.keyword;
 
-      const setCurrentPageNo = (e) => {
-        setCurrentPage(e);
-      };
+  const setCurrentPageNo = (e) => {
+    setCurrentPage(e);
+  };
 
-      const priceHandler = (event, newPrice) => {
-        setPrice(newPrice);
-      };
-      let count = filteredProductsCount;
+  const priceHandler = (event, newPrice) => {
+    setPrice(newPrice);
+  };
+  let count = filteredProductsCount;
 
-      useEffect(() => {
-        if (error) {
-          alert.error(error);
-          dispatch(clearErrors());
-        }
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
+    }
 
-        // dispatch(getProduct(keyword, currentPage, price, category, ratings));
-        dispatch(getAllProducts());
-      }, [
-        dispatch,
-        // keyword,
-        // currentPage,
-        // price,
-        // category,
-        // ratings,
-        alert,
-        error,
-      ]);
-    
+    // dispatch(getProduct(keyword, currentPage, price, category, ratings));
+    dispatch(getAllProducts());
+  }, [
+    dispatch,
+    // keyword,
+    // currentPage,
+    // price,
+    // category,
+    // ratings,
+    alert,
+    error,
+  ]);
+
   return (
     <Fragment>
       {loading ? (
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="PRODUCTS -- Flipzon" />
+          <MetaData title="Flipzon - All Products" />
           <h2 className="productsHeading">Products</h2>
 
-            <div className="products">
-              {/* {
+          <div className="products">
+            {/* {
                 console.log(products)
               } */}
             {products &&
-              products.map((p) => (
-                <ProductCard key={p._id} product={p} />
-              ))}
+              products.map((p) => <ProductCard key={p._id} product={p} />)}
           </div>
 
           <div className="filterBox">
-            <Typography>Price</Typography>
+            <h1>Price</h1>
+            {/* <Typography>Price</Typography> */}
             <Slider
               value={price}
               onChange={priceHandler}
@@ -104,9 +104,11 @@ const Products = ({ match }) => {
               aria-labelledby="range-slider"
               min={0}
               max={25000}
+              size="large"
             />
 
-            <Typography>Categories</Typography>
+            <h1>Categories</h1>
+            {/* <Typography>Categories</Typography> */}
             <ul className="categoryBox">
               {categories.map((category) => (
                 <li
@@ -119,8 +121,9 @@ const Products = ({ match }) => {
               ))}
             </ul>
 
+            <h1>Ratings Above</h1>
+            {/* <Typography component="legend">Ratings Above</Typography> */}
             <fieldset>
-              <Typography component="legend">Ratings Above</Typography>
               <Slider
                 value={ratings}
                 onChange={(e, newRating) => {
@@ -155,6 +158,6 @@ const Products = ({ match }) => {
       )}
     </Fragment>
   );
-}
+};
 
-export default Products
+export default Products;
