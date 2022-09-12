@@ -22,7 +22,8 @@
 
 .paginationBox {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   margin: 6vmax;
 }
 

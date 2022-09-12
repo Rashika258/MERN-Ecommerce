@@ -62,6 +62,7 @@ import UsersList from "./components/Admin/UsersList/UsersList";
 import UpdateUser from "./components/Admin/UpdateUser/UpdateUser";
 import ProductReviews from "./components/Admin/ProductReviews/ProductReviews";
 import Loader from "./components/Layout/Loader/Loader";
+import Payment from "./components/Cart/Payment/Payment"
 
 const App = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -121,6 +122,8 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
 
         <ProtectedRoute exact path="/shipping" component={Shipping} />
+
+        <ProtectedRoute exact path="/payment/process" component={Payment} />
 
         <ProtectedRoute exact path="/success" component={OrderSuccess} />
 
@@ -189,11 +192,12 @@ const App = () => {
           component={ProductReviews}
         />
 
-        <Route
+        {console.log(window.location.pathname)}
+        {/* <Route
           component={
             window.location.pathname === "/process/payment" ? null : NotFound
           }
-        />
+        /> */}
       </Switch>
 
       <Footer />

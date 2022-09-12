@@ -9,7 +9,7 @@ import MetaData from "../../Layout/MetaData/MetaData";
 import Loader from "../../Layout/Loader/Loader";
 
 import LaunchIcon from "@material-ui/icons/Launch";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import { DataGrid } from "@material-ui/data-grid";
 
 import "./MyOrders.css";
