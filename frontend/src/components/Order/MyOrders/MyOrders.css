@@ -3,7 +3,7 @@
     max-width: 100%;
     padding: 0 7vmax;
     box-sizing: border-box;
-    background-color: rgb(235, 235, 235);
+    /* background-color: rgb(235, 235, 235); */
     /* position: fixed; */
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@
 }
 
 .myOrdersTable {
-    background-color: white;
+    /* background-color: white; */
 }
 
 .myOrdersTable div {

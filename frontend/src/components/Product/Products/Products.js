@@ -64,15 +64,15 @@ const Products = ({ match }) => {
       dispatch(clearErrors());
     }
 
-    // dispatch(getProduct(keyword, currentPage, price, category, ratings));
-    dispatch(getAllProducts());
+    dispatch(getProduct(keyword, currentPage, price, category, ratings));
+    // dispatch(getAllProducts());
   }, [
     dispatch,
-    // keyword,
-    // currentPage,
-    // price,
-    // category,
-    // ratings,
+    keyword,
+    currentPage,
+    price,
+    category,
+    ratings,
     alert,
     error,
   ]);
@@ -86,12 +86,14 @@ const Products = ({ match }) => {
           <MetaData title="Flipzon - All Products" />
           <h2 className="productsHeading">Products</h2>
 
-          <div className="products">
+          <div className="productsDiv">
             {/* {
                 console.log(products)
               } */}
             {products &&
-              products.map((p) => <ProductCard key={p._id} product={p} />)}
+              products.map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
           </div>
 
           <div className="filterBox">

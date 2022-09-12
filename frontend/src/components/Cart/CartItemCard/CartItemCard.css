@@ -34,14 +34,16 @@
 
 .CartItemCard>div>div>{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.CartItemCard>div>div>p {
+.CartItemCard>div>p {
     color: #A10035;
-    font: 100 1vmax "Poppins";
+    font: 100 1.2vmax "Poppins";
     cursor: pointer;
+    text-decoration: underline;
 }
+
 
 @media screen and (max-width: 600px) {
     .CartItemCard {

@@ -5,12 +5,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 5vmax;
 }
 
 .shippingBox {
     background-color: white;
-    width: 25vw;
-    height: 90vh;
+    width: 50vw;
+    height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -18,10 +19,12 @@
 .shippingHeading {
     text-align: center;
     color: rgba(0, 0, 0, 0.664);
-    font: 400 1.3vmax "Roboto";
+    font: 400 2vmax "Lato";
     padding: 1.3vmax;
     border-bottom: 1px solid rgba(0, 0, 0, 0.205);
     width: 50%;
+    /* padding-bottom: 4vmax !important; */
+    margin-bottom: 4vmax !important;
     margin: auto;
 }
 
@@ -40,6 +43,12 @@
     display: flex;
     width: 100%;
     align-items: center;
+    /* margin-top: 1vmax; */
+}
+
+.MuiSvgIcon-root{
+    width: 2em;
+    height: 2em;
 }
 
 .shippingForm>div>input,
@@ -50,8 +59,9 @@
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.267);
     border-radius: 4px;
-    font: 300 0.9vmax cursive;
+    font: 600 1.2vmax "Poppins";
     outline: none;
+    margin: 1vmax;
 }
 
 .shippingForm>div>svg {
@@ -63,19 +73,21 @@
 
 .shippingBtn {
     border: none;
-    background-color: tomato;
+    background-color: #850E35;
     color: white;
-    font: 300 1vmax "Roboto";
+    font: 800 1.5vmax "Montserrat";
     width: 100%;
     padding: 1vmax;
     cursor: pointer;
     transition: all 0.5s;
     outline: none;
     margin: 2vmax;
+    border-radius: 10px;
 }
 
 .shippingBtn:hover {
-    background-color: rgb(179, 66, 46);
+    background-color: #EE6983;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 600px) {

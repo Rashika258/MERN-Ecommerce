@@ -16,6 +16,11 @@ import FaceIcon from "@material-ui/icons/Face";
 
 
 import "./LoginSignUp.css";
+import MetaData from "../../Layout/MetaData/MetaData";
+
+const ProfileImg = require("../../../images/Profile.png");
+
+const images={ProfileImg}
 
 const LoginSignUp = ({ history, location }) => {
   const dispatch = useDispatch();
@@ -40,8 +45,8 @@ const LoginSignUp = ({ history, location }) => {
 
   const { name, email, password } = user;
 
-  const [avatar, setAvatar] = useState("/Profile.png");
-  const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
+  const [avatar, setAvatar] = useState(images.ProfileImg);
+  const [avatarPreview, setAvatarPreview] = useState(images.ProfileImg);
 
   const loginSubmit = (e) => {
     e.preventDefault();
@@ -116,6 +121,7 @@ const LoginSignUp = ({ history, location }) => {
         <Loader />
       ) : (
         <Fragment>
+          <MetaData title={`Flipzon Register`} />
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>
@@ -146,7 +152,7 @@ const LoginSignUp = ({ history, location }) => {
                     onChange={(e) => setLoginPassword(e.target.value)}
                   />
                 </div>
-                <Link to="/password/forgot">Forgot Password ?</Link>
+                <Link to="/password/forgot">Forgot Password?</Link>
                 <input type="submit" value="Login" className="loginBtn" />
               </form>
               <form

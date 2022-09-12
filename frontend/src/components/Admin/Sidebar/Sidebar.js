@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../../images/logo.png";
+import logo from "../../../images/Flipzon_logo2.png";
 
 import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -19,7 +19,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Link to="/">
-        <img src={logo} alt="Ecommerce" />
+        <img src={logo} alt="Flipzon" />
       </Link>
       <Link to="/admin/dashboard">
         <p>
@@ -33,11 +33,11 @@ const Sidebar = () => {
         >
           <TreeItem nodeId="1" label="Products">
             <Link to="/admin/products">
-              <TreeItem nodeId="2" label="All" icon={<PostAddIcon />} />
+              <TreeItem nodeId="2" label="All Products"  icon={<PostAddIcon />} />
             </Link>
 
             <Link to="/admin/product">
-              <TreeItem nodeId="3" label="Create" icon={<AddIcon />} />
+              <TreeItem nodeId="3" label="Create Product" icon={<AddIcon />} />
             </Link>
           </TreeItem>
         </TreeView>

@@ -13,6 +13,11 @@ import FaceIcon from "@material-ui/icons/Face";
 import Loader from '../../Layout/Loader/Loader';
 import MetaData from '../../Layout/MetaData/MetaData';
 
+import ProfileImg from "../../../images/Profile.png";
+
+import './UpdateProfile.css'
+
+
 const UpdateProfile = ({ history }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -24,7 +29,7 @@ const UpdateProfile = ({ history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState();
-  const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
+  const [avatarPreview, setAvatarPreview] = useState({ProfileImg});
 
   const updateProfileSubmit = (e) => {
     e.preventDefault();
@@ -79,7 +84,7 @@ const UpdateProfile = ({ history }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Update Profile" />
+          <MetaData title="Flipzon - Update Profile" />
           <div className="updateProfileContainer">
             <div className="updateProfileBox">
               <h2 className="updateProfileHeading">Update Profile</h2>

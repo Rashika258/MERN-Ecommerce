@@ -1,12 +1,27 @@
 .confirmOrderPage {
     height: 100vh;
-    background-color: white;
+    /* background-color: white; */
+    /* margin-top: 10vmax; */
     display: grid;
     grid-template-columns: 6fr 3fr;
+    border: 2px solid hsl(0, 22%, 23%);
+    width: 80%;
+   margin: auto;
+   border-radius: 10px;
+}
+
+.confirmshippingArea>h1 {
+    font-family: "Montserrat";
+    color: #472D2D;
+    font-weight: 900;
+    border-bottom: 2px solid #553939;
+    width: fit-content;
+    padding: 1vmax;
 }
 
 .confirmOrderPage>div:last-child {
-    border-left: 1px solid rgba(0, 0, 0, 0.247);
+    height: 100vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.247);
 }
 
 .confirmshippingArea {
@@ -14,9 +29,12 @@
     padding-bottom: 0%;
 }
 
-.confirmshippingArea>p {
-    font: 400 1.8vmax "Roboto";
-}
+/* .confirmshippingAreaBox>div>p {
+    font: 400 2.8vmax "Poppins";
+} */
+/* .confirmshippingArea>p>span {
+    font: 400 1.8vmax "Poppins";
+} */
 
 .confirmshippingAreaBox,
 .confirmCartItemsContainer {
@@ -29,14 +47,24 @@
 }
 
 .confirmshippingAreaBox>div>p {
-    font: 400 1vmax "Roboto";
+     font: 400 1.4vmax "Poppins";
     color: black;
 }
 
 .confirmshippingAreaBox>div>span {
-    margin: 0 1vmax;
-    font: 100 1vmax "Roboto";
-    color: #575757;
+    margin: 0.2vmax 0.5vmax;
+    font: 100 1.2vmax "Lato";
+    color: #472D2D;
+}
+
+
+.confirmCartItems>h1 {
+     font-family: "Montserrat";
+    color: #472D2D;
+    font-weight: 900;
+    border-bottom: 2px solid #553939;
+    width: fit-content;
+    padding: 1vmax;
 }
 
 .confirmCartItems>p {
@@ -55,37 +83,51 @@
 
 .confirmCartItemsContainer>div {
     display: flex;
-    font: 400 1vmax "Roboto";
+   
     align-items: center;
     justify-content: space-between;
     margin: 2vmax 0;
 }
 
 .confirmCartItemsContainer>div>img {
-    width: 3vmax;
+    width: 10vmax;
+    height: 10vmax;
+    border-radius: 5px;
 }
 
 .confirmCartItemsContainer>div>a {
-    color: #575757;
+    color: #472D2D;
     margin: 0 2vmax;
-    width: 60%;
+    width: 50%;
     text-decoration: none;
+     font: 400 1.4vmax "Poppins";
 }
 
 .confirmCartItemsContainer>div>span {
-    font: 100 1vmax "Roboto";
-    color: #5e5e5e;
+    font: 100 1vmax "Poppins";
+    color: #472D2D;
+    /* width: fit-content; */
 }
 
 .orderSummary {
-    padding: 7vmax;
+    padding: 5vmax;
 }
 
-.orderSummary>p {
-    text-align: center;
-    font: 400 1.8vmax "Roboto";
-    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
-    padding: 1vmax;
+.orderSummary>h1 {
+        font-family: "Montserrat";
+    color: #472D2D;
+    font-size: 2vmax;
+    font-weight: bolder;
+    border-bottom: 2px solid #553939;
+    width: fit-content;
+    /* padding: 1vmax; */
+}
+
+.orderSummary>div>div>p {
+    text-align: justify;
+    font: 400 1.2vmax "Lato";
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.267); */
+    /* padding: 1vmax; */
     width: 100%;
     margin: auto;
     box-sizing: border-box;
@@ -93,7 +135,7 @@
 
 .orderSummary>div>div {
     display: flex;
-    font: 300 1vmax "Roboto";
+    /* font: 300 1vmax "Roboto"; */
     justify-content: space-between;
     margin: 2vmax 0;
 }
@@ -104,14 +146,14 @@
 
 .orderSummaryTotal {
     display: flex;
-    font: 300 1vmax "Roboto";
+    font: 300 1.5vmax "Lato";
     justify-content: space-between;
     border-top: 1px solid rgba(0, 0, 0, 0.363);
     padding: 2vmax 0;
 }
 
 .orderSummary>button {
-    background-color: tomato;
+    background-color: #850E35;
     color: white;
     width: 100%;
     padding: 1vmax;
@@ -119,11 +161,13 @@
     margin: auto;
     cursor: pointer;
     transition: 0.5s;
-    font: 400 1vmax "Roboto";
+    font: 400 1.4vmax "Poppins";
+    border-radius: 10px;
 }
 
 .orderSummary>button:hover {
     background-color: rgb(192, 71, 50);
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 600px) {

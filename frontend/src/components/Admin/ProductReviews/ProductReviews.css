@@ -1,25 +1,39 @@
 .productReviewsContainer {
     width: 100%;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     border-left: 1px solid rgba(0, 0, 0, 0.158);
     height: 100vh;
 }
 
 .productReviewsForm {
+
+    margin-top: 5vmax !important;
     width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     padding: 3vmax;
-    background-color: white;
+    /* background-color: white; */
+}
+
+.noReviewsHeading {
+     color: #472D2D;
+    font: 300 1.5rem "Montserrat";
+    text-align: center;
+    /* border-bottom: 3px solid black; */
+    width: fit-content;
+    margin: auto;
 }
 
 .productReviewsFormHeading {
-    color: rgba(0, 0, 0, 0.733);
-    font: 300 2rem "Roboto";
+    color: #472D2D;
+    font: 300 2rem "Montserrat";
     text-align: center;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    margin: auto;
 }
 
 .productReviewsForm>div {
@@ -36,7 +50,7 @@
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.267);
     border-radius: 4px;
-    font: 300 0.9vmax cursive;
+    font: 300 1.3vmax "Poppins";
     outline: none;
 }
 

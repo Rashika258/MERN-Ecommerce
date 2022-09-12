@@ -6,7 +6,7 @@
     top: 0%;
     left: 0%;
     max-width: 100%;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .profileContainer>div {
@@ -20,15 +20,18 @@
 }
 
 .profileContainer>div:first-child>h1 {
-    color: rgba(0, 0, 0, 0.555);
-    font: 500 2.2vmax "Roboto";
-    transform: translateX(-10vmax) translateY(-2vmax);
+    color: #472D2D;
+    font: 900 2.2vmax "Montserrat";
+    border-bottom: 2px solid #472D2D;
+    /* text-align: center; */
+    /* transform: translateX(-10vmax) translateY(-2vmax); */
 }
 
 .profileContainer>div:first-child>img {
     width: 20vmax;
     border-radius: 100%;
     transition: all 0.5s;
+    padding-top: 2vmax;
 }
 
 .profileContainer>div:first-child>img:hover {
@@ -37,8 +40,8 @@
 
 .profileContainer>div:first-child>a {
     border: none;
-    background-color: tomato;
-    font: 400 1vmax "Roboto";
+    background-color: #850E35;
+    font: 400 1.5vmax "Lato";
     color: white;
     text-decoration: none;
     padding: 0.5vmax;
@@ -46,10 +49,12 @@
     margin: 4vmax;
     text-align: center;
     transition: all 0.5s;
+    border-radius: 10px;
 }
 
 .profileContainer>div:first-child>a:hover {
     background-color: rgb(204, 78, 56);
+    opacity: 0.5;
 }
 
 .profileContainer>div:last-child {
@@ -60,13 +65,15 @@
 }
 
 .profileContainer>div:last-child>div>h4 {
-    color: black;
-    font: 400 1.2vmax "Roboto";
+    color: #472D2D;
+    font: 400 1.5vmax "Poppins";
+    border-bottom: 1px solid #472D2D;
+    width: fit-content;
 }
 
 .profileContainer>div:last-child>div>p {
     color: rgba(0, 0, 0, 0.418);
-    font: 400 1vmax cursive;
+    font: 900 1.2vmax Poppins;
     margin: 0.2vmax;
 }
 
@@ -78,14 +85,17 @@
 
 .profileContainer>div:last-child>div:last-child>a {
     border: none;
-    background-color: rgb(68, 68, 68);
-    font: 400 1vmax "Roboto";
+    background-color: #472D2D;
+    font: 400 1vmax "Poppins";
     color: white;
     text-decoration: none;
-    padding: 0.5vmax;
+    padding: 1vmax;
     text-align: center;
     transition: all 0.5s;
     margin: 1vmax 0;
+    width: fit-content;
+    border-radius: 10px;
+
 }
 
 .profileContainer>div:last-child>div:last-child>a:hover {

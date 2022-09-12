@@ -7,6 +7,8 @@ import Loader from "../../Layout/Loader/Loader";
 import MetaData from "../../Layout/MetaData/MetaData";
 import { clearErrors, forgotPassword } from "../../../actions/userAction";
 
+import "./ForgotPassword.css";
+
 
 const ForgotPassword = () => {
 
@@ -44,7 +46,7 @@ const ForgotPassword = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Forgot Password" />
+          <MetaData title="Flipzon - Forgot Password" />
           <div className="forgotPasswordContainer">
             <div className="forgotPasswordBox">
               <h2 className="forgotPasswordHeading">Forgot Password</h2>

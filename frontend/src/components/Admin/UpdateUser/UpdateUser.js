@@ -21,6 +21,9 @@ import {
 } from "../../../actions/userAction";
 
 
+import "../NewProduct/NewProduct.css";
+
+
 const UpdateUser = ({ history, match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -78,7 +81,7 @@ const UpdateUser = ({ history, match }) => {
 
   return (
     <Fragment>
-      <MetaData title="Update User" />
+      <MetaData title="Flipzon - Update User" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">

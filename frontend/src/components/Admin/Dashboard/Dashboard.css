@@ -1,24 +1,27 @@
 .dashboard {
     width: 100vw;
     max-width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .dashboardContainer {
-    border-left: 1px solid rgba(0, 0, 0, 0.13);
-    background-color: rgb(255, 255, 255);
+    border-left: 2px solid rgba(0, 0, 0, 0.13);
+    /* background-color: rgb(255, 255, 255); */
     padding: 3rem 0;
 }
 
 .dashboardContainer>h1 {
-    color: rgba(0, 0, 0, 0.733);
-    font: 300 2rem "Roboto";
+    color: #472D2D;
+    font: 900 2.5rem "Montserrat";
     text-align: center;
-    width: 50%;
+    width: fit-content;
     padding: 1.5rem;
     margin: auto;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
 }
 
 .dashboardSummary {

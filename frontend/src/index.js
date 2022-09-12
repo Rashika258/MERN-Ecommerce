@@ -14,7 +14,11 @@ const options = {
   position: positions.BOTTOM_CENTER,
   transition: transitions.SCALE,
   offset: "30px",
+  containerStyle: {
+    backgroundColor: "#FDEEDC",
+  },
 };
+
 
 ReactDOM.render(
   <Provider store={store}>

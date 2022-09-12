@@ -10,7 +10,11 @@ import { Button } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-import { getAllUsers, clearErrors, deleteUser } from "../../../actions/userAction";
+import {
+  getAllUsers,
+  clearErrors,
+  deleteUser,
+} from "../../../actions/userAction";
 import { DELETE_USER_RESET } from "../../../constants/userConstants";
 
 import SideBar from "../Sidebar/Sidebar";
@@ -54,13 +58,13 @@ const UsersList = ({ history }) => {
   }, [dispatch, alert, error, deleteError, history, isDeleted, message]);
 
   const columns = [
-    { field: "id", headerName: "User ID", minWidth: 180, flex: 0.8 },
+    { field: "id", headerName: "User-Id", minWidth: 100, flex: 0.5 },
 
     {
       field: "email",
       headerName: "Email",
-      minWidth: 200,
-      flex: 1,
+      minWidth: 150,
+      flex: 0.8,
     },
     {
       field: "name",
@@ -123,7 +127,7 @@ const UsersList = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL USERS - Admin`} />
+      <MetaData title={`Flipzon - List of Users`} />
 
       <div className="dashboard">
         <SideBar />

@@ -133,7 +133,7 @@ const ProductReviews = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL REVIEWS - Admin`} />
+      <MetaData title={`Flipzon - All Reviews`} />
 
       <div className="dashboard">
         <SideBar />
@@ -176,7 +176,7 @@ const ProductReviews = ({ history }) => {
               autoHeight
             />
           ) : (
-            <h1 className="productReviewsFormHeading">No Reviews Found</h1>
+            <h1 className="noReviewsHeading">No Reviews Found</h1>
           )}
         </div>
       </div>

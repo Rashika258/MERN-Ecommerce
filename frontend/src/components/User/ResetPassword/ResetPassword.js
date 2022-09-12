@@ -49,7 +49,7 @@ const ResetPassword = ({ history, match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Change Password" />
+          <MetaData title="Flipzon - Reset Password" />
           <div className="resetPasswordContainer">
             <div className="resetPasswordBox">
               <h2 className="resetPasswordHeading">Update Profile</h2>

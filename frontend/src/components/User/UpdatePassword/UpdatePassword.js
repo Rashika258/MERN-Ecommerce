@@ -62,10 +62,10 @@ const UpdatePassword = ({ history }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Change Password" />
+          <MetaData title="Flipzon - Change Password" />
           <div className="updatePasswordContainer">
             <div className="updatePasswordBox">
-              <h2 className="updatePasswordHeading">Update Profile</h2>
+              <h2 className="updatePasswordHeading">Update Password</h2>
 
               <form
                 className="updatePasswordForm"
@@ -104,7 +104,7 @@ const UpdatePassword = ({ history }) => {
                 </div>
                 <input
                   type="submit"
-                  value="Change"
+                  value="Change Password"
                   className="updatePasswordBtn"
                 />
               </form>

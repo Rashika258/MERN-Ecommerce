@@ -33,3 +33,10 @@ input[type="number"] {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.greenColor {
+  color: #1C6758 !important;
+}
+.redColor {
+  color: #C21010 !important;
+}

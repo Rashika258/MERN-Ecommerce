@@ -96,17 +96,16 @@ const NewProduct = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title="Create Product" />
+      <MetaData title="Flipzon - Create Product" />
       <div className="dashboard">
         <Sidebar />
         <div className="newProductContainer">
+          <h1>Create Product</h1>
           <form
             className="createProductForm"
             encType="multipart/form-data"
             onSubmit={createProductSubmitHandler}
           >
-            <h1>Create Product</h1>
-
             <div>
               <SpellcheckIcon />
               <input

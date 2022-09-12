@@ -71,11 +71,11 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <MetaData title="Dashboard - Admin Panel" />
+      <MetaData title="Flipzon - Admin Dashboard" />
       <Sidebar />
 
       <div className="dashboardContainer">
-        <Typography component="h1">Dashboard</Typography>
+        <h1>Admin Dashboard</h1>
 
         <div className="dashboardSummary">
           <div>

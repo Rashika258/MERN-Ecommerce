@@ -41,29 +41,29 @@ const ConfirmOrder = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title="Confirm Order" />
+      <MetaData title="Flipzon - Confirm Order" />
       <CheckoutSteps activeStep={1} />
       <div className="confirmOrderPage">
         <div>
           <div className="confirmshippingArea">
-            <Typography>Shipping Info</Typography>
+            <h1>Shipping Info</h1>
             <div className="confirmshippingAreaBox">
               <div>
-                <p>Name:</p>
+                <p>Name - </p>
                 <span>{user.name}</span>
               </div>
               <div>
-                <p>Phone:</p>
+                <p>Phone - </p>
                 <span>{shippingInfo.phoneNo}</span>
               </div>
               <div>
-                <p>Address:</p>
+                <p>Address - </p>
                 <span>{address}</span>
               </div>
             </div>
           </div>
           <div className="confirmCartItems">
-            <Typography>Your Cart Items:</Typography>
+            <h1>Your Cart Items</h1>
             <div className="confirmCartItemsContainer">
               {cartItems &&
                 cartItems.map((item) => (
@@ -84,25 +84,25 @@ const ConfirmOrder = ({ history }) => {
         {/*  */}
         <div>
           <div className="orderSummary">
-            <Typography>Order Summery</Typography>
+            <h1>Order Summary</h1>
             <div>
               <div>
-                <p>Subtotal:</p>
+                <p>Subtotal - </p>
                 <span>₹{subtotal}</span>
               </div>
               <div>
-                <p>Shipping Charges:</p>
+                <p>Shipping Charges - </p>
                 <span>₹{shippingCharges}</span>
               </div>
               <div>
-                <p>GST:</p>
+                <p>GST - </p>
                 <span>₹{tax}</span>
               </div>
             </div>
 
             <div className="orderSummaryTotal">
               <p>
-                <b>Total:</b>
+                <b>Total - </b>
               </p>
               <span>₹{totalPrice}</span>
             </div>

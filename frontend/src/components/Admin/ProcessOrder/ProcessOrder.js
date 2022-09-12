@@ -61,7 +61,7 @@ const ProcessOrder = ({ history, match }) => {
 
   return (
     <Fragment>
-      <MetaData title="Process Order" />
+      <MetaData title="Flipzon - Process Order" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">
@@ -76,20 +76,20 @@ const ProcessOrder = ({ history, match }) => {
             >
               <div>
                 <div className="confirmshippingArea">
-                  <Typography>Shipping Info</Typography>
+                  <h1>Shipping Info</h1>
                   <div className="orderDetailsContainerBox">
                     <div>
-                      <p>Name:</p>
+                      <p>Name </p>
                       <span>{order.user && order.user.name}</span>
                     </div>
                     <div>
-                      <p>Phone:</p>
+                      <p>Phone </p>
                       <span>
                         {order.shippingInfo && order.shippingInfo.phoneNo}
                       </span>
                     </div>
                     <div>
-                      <p>Address:</p>
+                      <p>Address </p>
                       <span>
                         {order.shippingInfo &&
                           `${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state}, ${order.shippingInfo.pinCode}, ${order.shippingInfo.country}`}
@@ -97,7 +97,7 @@ const ProcessOrder = ({ history, match }) => {
                     </div>
                   </div>
 
-                  <Typography>Payment</Typography>
+                  <h1>Payment</h1>
                   <div className="orderDetailsContainerBox">
                     <div>
                       <p
@@ -121,7 +121,7 @@ const ProcessOrder = ({ history, match }) => {
                     </div>
                   </div>
 
-                  <Typography>Order Status</Typography>
+                  <h1>Order Status</h1>
                   <div className="orderDetailsContainerBox">
                     <div>
                       <p
@@ -135,23 +135,23 @@ const ProcessOrder = ({ history, match }) => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="confirmCartItems">
-                  <Typography>Your Cart Items:</Typography>
-                  <div className="confirmCartItemsContainer">
-                    {order.orderItems &&
-                      order.orderItems.map((item) => (
-                        <div key={item.product}>
-                          <img src={item.image} alt="Product" />
-                          <Link to={`/product/${item.product}`}>
-                            {item.name}
-                          </Link>{" "}
-                          <span>
-                            {item.quantity} X ₹{item.price} ={" "}
-                            <b>₹{item.price * item.quantity}</b>
-                          </span>
-                        </div>
-                      ))}
+                  <h1>Your Cart Items</h1>
+                  <div className="orderDetailsContainerBox">
+                    <div className="confirmCartItemsContainer">
+                      {order.orderItems &&
+                        order.orderItems.map((item) => (
+                          <div key={item.product}>
+                            <img src={item.image} alt="Product" />
+                            <Link to={`/product/${item.product}`}>
+                              {item.name}
+                            </Link>{" "}
+                            <span>
+                              {item.quantity} X ₹{item.price} ={" "}
+                              <b>₹{item.price * item.quantity}</b>
+                            </span>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,12 @@
+const Product = require("../models/productModel");
+
 class ApiFeatures {
   constructor(query, queryStr) {
     this.query = query;
     this.queryStr = queryStr;
+
+    // console.log("Query --- ", query);
+    // console.log("Query String ---- ", queryStr);
   }
 
   search() {
@@ -14,7 +19,11 @@ class ApiFeatures {
         }
       : {};
 
-    this.query = this.query.find({ ...keyword });
+    // console.log("Keyword ---", keyword);
+
+    this.query = Product.find({ ...keyword });
+    // console.log(".........", this.query);
+    // console.log("This ------------", this);
     return this;
   }
 

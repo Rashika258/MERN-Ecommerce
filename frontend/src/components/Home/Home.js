@@ -5,7 +5,7 @@ import { BsFillMouse2Fill } from "react-icons/bs";
 
 import "./Home.css";
 
-import { clearErrors, getAllProducts } from "../../actions/productAction";
+import { clearErrors, getProduct } from "../../actions//productAction";
 
 import ProductCard from "./ProductCard.js";
 import MetaData from "../Layout/MetaData/MetaData";
@@ -22,7 +22,7 @@ const Home = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getAllProducts());
+    dispatch(getProduct());
   }, [dispatch, error, alert]);
 
   return (

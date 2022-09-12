@@ -7,6 +7,7 @@ import "./Shipping.css";
 import { saveShippingInfo } from "../../../actions/cartAction";
 
 import PinDropIcon from "@material-ui/icons/PinDrop";
+
 import HomeIcon from "@material-ui/icons/Home";
 import LocationCityIcon from "@material-ui/icons/LocationCity";
 import PublicIcon from "@material-ui/icons/Public";
@@ -16,7 +17,6 @@ import { Country, State } from "country-state-city";
 
 import CheckoutSteps from "../CheckOutSteps/CheckOutSteps";
 import MetaData from "../../Layout/MetaData/MetaData";
-
 
 const Shipping = ({ history }) => {
   const dispatch = useDispatch();
@@ -45,13 +45,13 @@ const Shipping = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title="Shipping Details" />
+      <MetaData title="Flipzon - Shipping Details" />
 
       <CheckoutSteps activeStep={0} />
 
       <div className="shippingContainer">
         <div className="shippingBox">
-          <h2 className="shippingHeading">Shipping Details</h2>
+          <h3 className="shippingHeading">Shipping Details</h3>
 
           <form
             className="shippingForm"

@@ -70,6 +70,7 @@
     display: flex;
     align-items: center;
     height: 8vmax;
+    padding-left: 2vmax;
 }
 
 .cartInput>button {
@@ -88,11 +89,11 @@
 .cartInput>input {
     border: none;
     padding: 0.5vmax;
-    width: 1vmax;
+    width: 5vmax;
     text-align: center;
     outline: none;
-    font: 400 0.8vmax "Roboto";
-    color: rgba(0, 0, 0, 0.74);
+    font: 400 1.2vmax "Lato";
+    color: black;
 }
 
 .cartSubtotal {
@@ -101,7 +102,7 @@
     height: 8vmax;
     align-items: center;
     box-sizing: border-box;
-    font: 300 1vmax cursive;
+    font: 300 1.4vmax "Poppins";
     justify-content: flex-end;
     color: rgba(0, 0, 0, 0.753);
 }
@@ -116,7 +117,7 @@
     margin: 1vmax 4vmax;
     box-sizing: border-box;
     padding: 2vmax 0;
-    font: 300 1vmax "Roboto";
+    font: 300 1.5vmax "Lato";
     display: flex;
     justify-content: space-between;
 }
@@ -132,7 +133,7 @@
     border: none;
     padding: 0.8vmax 4vmax;
     width: 50%;
-    font: 300 0.8vmax "Roboto";
+    font: 300 1.5vmax "Poppins";
     margin: 1vmax 4vmax;
     cursor: pointer;
     border-radius: 30px;
