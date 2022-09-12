@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useAlert } from "react-alert";
 
 import { Link } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+// import { Typography } from "@material-ui/core";
 
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { Button } from "@material-ui/core";

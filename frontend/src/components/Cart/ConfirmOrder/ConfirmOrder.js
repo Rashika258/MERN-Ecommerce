@@ -7,7 +7,7 @@ import MetaData from "../../Layout/MetaData/MetaData";
 
 import "./ConfirmOrder.css";
 
-import { Typography } from "@material-ui/core";
+// import { Typography } from "@material-ui/core";
 
 const ConfirmOrder = ({ history }) => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);

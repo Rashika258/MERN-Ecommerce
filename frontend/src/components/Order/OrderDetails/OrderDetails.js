@@ -8,7 +8,7 @@ import { clearErrors, getOrderDetails } from "../../../actions/orderAction";
 import Loader from "../../Layout/Loader/Loader";
 import MetaData from "../../Layout/MetaData/MetaData";
 
-import { Typography } from "@material-ui/core";
+// import { Typography } from "@material-ui/core";
 
 import "./OrderDetails.css";
 
@@ -33,13 +33,13 @@ const OrderDetails = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Order Details" />
+          <MetaData title="Flipzon - Order Details" />
           <div className="orderDetailsPage">
             <div className="orderDetailsContainer">
-              <Typography component="h1">
-                Order #{order && order._id}
-              </Typography>
-              <Typography>Shipping Info</Typography>
+              <h1>
+                Order Id - {order && order._id}
+              </h1>
+              <h1>Shipping Info</h1>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p>Name:</p>
@@ -59,7 +59,7 @@ const OrderDetails = ({ match }) => {
                   </span>
                 </div>
               </div>
-              <Typography>Payment</Typography>
+              <h1>Payment</h1>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p
@@ -83,7 +83,7 @@ const OrderDetails = ({ match }) => {
                 </div>
               </div>
 
-              <Typography>Order Status</Typography>
+              <h1>Order Status</h1>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p
@@ -100,7 +100,7 @@ const OrderDetails = ({ match }) => {
             </div>
 
             <div className="orderDetailsCartItems">
-              <Typography>Order Items:</Typography>
+              <h1>Order Items:</h1>
               <div className="orderDetailsCartItemsContainer">
                 {order.orderItems &&
                   order.orderItems.map((item) => (

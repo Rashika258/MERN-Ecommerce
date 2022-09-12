@@ -7,7 +7,7 @@ import CartItemCard from "../CartItemCard/CartItemCard";
 
 import { addItemsToCart, removeItemsFromCart } from "../../../actions/cartAction";
 
-import { Typography } from "@material-ui/core";
+// import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 
 

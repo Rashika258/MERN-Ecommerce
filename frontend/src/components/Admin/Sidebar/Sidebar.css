@@ -27,10 +27,17 @@
     transition: all 0.5s;
 }
 
+.MuiTreeItem-root{
+    margin-left: 2vmax !important;
+}
+
+
+
 .MuiTypography-root{
     background-color: #FFF5E4 !important;
      color: #472D2D;
-    font: 500 1.5rem "Lato" !important;
+  font: 800 1.5rem "Lato" !important;
+  padding: 1vmax;
 
 }
 

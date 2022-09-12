@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
   clearErrors,
-  getAllProducts,
+  // getAllProducts,
   getProduct,
 } from "../../../actions/productAction";
 
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import Pagination from "react-js-pagination";
 
@@ -137,7 +137,12 @@ const Products = ({ match }) => {
                 max={5}
               />
             </fieldset>
-          </div>
+            </div>
+            
+            {
+              console.log("Result Per Page", resultPerPage, count)
+          // console.log("Count", count)
+            }
           {resultPerPage < count && (
             <div className="paginationBox">
               <Pagination

@@ -24,11 +24,11 @@ const MyOrders = () => {
   const { user } = useSelector((state) => state.user);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },
+    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.6 },
     {
       field: "status",
       headerName: "Status",
-      minWidth: 150,
+      minWidth: 100,
       flex: 0.5,
       cellClassName: (params) => {
         return params.getValue(params.id, "status") === "Delivered"
@@ -40,15 +40,15 @@ const MyOrders = () => {
       field: "itemsQty",
       headerName: "Items Qty",
       type: "number",
-      minWidth: 150,
-      flex: 0.3,
+      minWidth: 170,
+      flex: 0.5,
     },
 
     {
       field: "amount",
       headerName: "Amount",
       type: "number",
-      minWidth: 270,
+      minWidth: 250,
       flex: 0.5,
     },
 
@@ -97,6 +97,7 @@ const MyOrders = () => {
         <Loader />
       ) : (
         <div className="myOrdersPage">
+          <h1 id="myOrdersHeading">{user.name}'s Orders</h1>
           <DataGrid
             rows={rows}
             columns={columns}
@@ -105,8 +106,6 @@ const MyOrders = () => {
             className="myOrdersTable"
             autoHeight
           />
-
-          <Typography id="myOrdersHeading">{user.name}'s Orders</Typography>
         </div>
       )}
     </Fragment>

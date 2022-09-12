@@ -42,7 +42,7 @@ export const getAllProducts = () => async (dispatch) => {
 
     dispatch({
       type: ALL_PRODUCT_SUCCESS,
-      payload: data.products,
+      payload: data,
     });
 
 
@@ -75,7 +75,7 @@ export const getProduct =
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
-        payload: data.products,
+        payload: data,
       });
     } catch (error) {
       dispatch({

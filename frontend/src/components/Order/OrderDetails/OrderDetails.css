@@ -1,11 +1,19 @@
 .orderDetailsPage {
-    background-color: white;
+    background-color: #FFD8A9;
+    margin: 10vmax;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .orderDetailsContainer>h1 {
-    font: 300 3vmax "Roboto";
+    font: 300 1.5vmax "Montserrat";
     margin: 4vmax 0;
-    color: tomato;
+    color: #820000;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    background-color: #F1A661 !important;
+    padding: 1.5vmax;
+    border-radius: 10vmax;
 }
 
 .orderDetailsContainer {
@@ -13,9 +21,9 @@
     padding-bottom: 0%;
 }
 
-.orderDetailsContainer>p {
-    font: 400 1.8vmax "Roboto";
-}
+/* .orderDetailsContainer>div>p {
+    font: 400 2vmax "Lato";
+} */
 
 .orderDetailsContainerBox,
 .orderDetailsCartItemsContainer {
@@ -28,18 +36,29 @@
 }
 
 .orderDetailsContainerBox>div>p {
-    font: 400 1vmax "Roboto";
+    font: 400 1.2vmax "Lato" !important;
     color: black;
 }
 
 .orderDetailsContainerBox>div>span {
     margin: 0 1vmax;
-    font: 100 1vmax "Roboto";
+    font: 400 1.2vmax "Lato" !important;
     color: #575757;
 }
 
 .orderDetailsCartItems>p {
-    font: 400 1.8vmax "Roboto";
+    font: 400 1.5vmax "Roboto";
+}
+
+.orderDetailsCartItems>h1{
+    font: 300 2vmax "Montserrat";
+    margin: 4vmax 0;
+    color: #820000;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    background-color: #F1A661 !important;
+    padding: 1.5vmax;
+    border-radius: 10vmax;
 }
 
 .orderDetailsCartItems {
@@ -49,13 +68,15 @@
 
 .orderDetailsCartItemsContainer>div {
     display: flex;
-    font: 400 1vmax "Roboto";
+    font: 400 1.5vmax "Lato";
     align-items: center;
     margin: 2vmax 0;
 }
 
 .orderDetailsCartItemsContainer>div>img {
-    width: 3vmax;
+    width: 10vmax;
+    height: 10vmax;
+    border-radius: 5px;
 }
 
 .orderDetailsCartItemsContainer>div>a {
@@ -66,7 +87,7 @@
 }
 
 .orderDetailsCartItemsContainer>div>span {
-    font: 100 1vmax "Roboto";
+    font: 100 2vmax "Lato";
     color: #5e5e5e;
 }
 

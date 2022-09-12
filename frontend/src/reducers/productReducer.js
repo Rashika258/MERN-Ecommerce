@@ -45,10 +45,10 @@ import {
       case ALL_PRODUCT_SUCCESS:
         return {
           loading: false,
-          products: action.payload,
-          // productsCount: action.payload.productsCount,
-          // resultPerPage: action.payload.resultPerPage,
-          // filteredProductsCount: action.payload.filteredProductsCount,
+          products: action.payload.products,
+          productsCount: action.payload.productsCount,
+          resultPerPage: action.payload.resultPerPage,
+          filteredProductsCount: action.payload.filteredProductsCount,
         };
   
       case ADMIN_PRODUCT_SUCCESS:

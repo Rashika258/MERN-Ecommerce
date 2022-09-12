@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartItemCard.css";
 import { Link } from "react-router-dom";
-import {FaTimes} from "react-icons/fa";
+// import {FaTimes} from "react-icons/fa";
 
 
 const CartItemCard = ({ item, deleteCartItems }) => {

@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+// import { Typography } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -51,8 +51,8 @@ const Dashboard = () => {
     datasets: [
       {
         label: "TOTAL AMOUNT",
-        backgroundColor: ["tomato"],
-        hoverBackgroundColor: ["rgb(197, 72, 49)"],
+        backgroundColor: ["#850E35"],
+        hoverBackgroundColor: ["#EE6983"],
         data: [0, totalAmount],
       },
     ],
@@ -62,8 +62,8 @@ const Dashboard = () => {
     labels: ["Out of Stock", "InStock"],
     datasets: [
       {
-        backgroundColor: ["#00A6B4", "#6800B4"],
-        hoverBackgroundColor: ["#4B5000", "#35014F"],
+        backgroundColor: ["#D36B00", "#42032C"],
+        hoverBackgroundColor: ["#224B0C", "#AC4425"],
         data: [outOfStock, products.length - outOfStock],
       },
     ],
@@ -79,13 +79,11 @@ const Dashboard = () => {
 
         <div className="dashboardSummary">
           <div>
-            <p>
-              Total Amount <br /> ₹{totalAmount}
-            </p>
+            <p>Total Amount - ₹{totalAmount}</p>
           </div>
           <div className="dashboardSummaryBox2">
             <Link to="/admin/products">
-              <p>Product</p>
+              <p>Products</p>
               <p>{products && products.length}</p>
             </Link>
             <Link to="/admin/orders">
@@ -100,10 +98,12 @@ const Dashboard = () => {
         </div>
 
         <div className="lineChart">
+       <h1>Amount Earned</h1>
           <Line data={lineState} />
         </div>
 
         <div className="doughnutChart">
+          <h1>Total Stock</h1>
           <Doughnut data={doughnutState} />
         </div>
       </div>
